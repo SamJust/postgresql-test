@@ -9,11 +9,8 @@ global.client = new Client({
   password: 'samjust'
 });
 
-const initDB = require('../utils/initDatabase');
-
 global.client.connect().then(() => {
   console.log('Connection established');
-  // initDB();
 }).catch(err => {
   console.log('Error connecting to database');
   console.error(err);
